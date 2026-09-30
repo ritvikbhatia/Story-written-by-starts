@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riya · A Story Written in the Stars</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="locked" data-sky="dawn">
+    <!-- Living sky behind everything: changes with each chapter -->
+    <div class="sky-bg" aria-hidden="true">
+      <div class="layer dawn"></div>
+      <div class="layer rain"></div>
+      <div class="layer dusk"></div>
+      <div class="layer night"></div>
+    </div>
+    <canvas id="rain" aria-hidden="true"></canvas>
+    <div class="petals" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"><span></span></div>
+
+    <!-- ===== THE BOOK COVER ===== -->
+    <div class="cover" id="cover">
+      <div class="door left"></div>
+      <div class="door right"></div>
+      <div class="cover-content">
+        <div class="seal">R</div>
+        <p class="eyebrow">a storybook written for</p>
+        <h1>Riya</h1>
+        <p class="sub">by the boy who still chooses to win your heart,<br />again and again, every single day</p>
+        <button id="openBook" class="button" type="button">Open our story ✦</button>
+      </div>
+    </div>
+
+    <!-- ===== PROLOGUE ===== -->
+    <header class="scene prologue" data-sky="dawn">
+      <div class="cloud c1"></div>
+      <div class="cloud c2"></div>
+      <div class="cloud c3"></div>
+      <div class="opening-text">
+        <p class="eyebrow">for the girl I never want to take for granted</p>
+        <h2 class="typewriter" data-text="Maybe you came into my life easily. But loving you was never casual — it is a longing I choose, every day."></h2>
+        <p class="prologue-note">If you ever felt there was no yearning, this story is my promise to make you feel chosen, pursued, and deeply loved.</p>
+        <p class="scroll-hint">scroll gently ↓</p>
+      </div>
+      <svg class="hills" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path class="hill back" d="M0,200 C240,120 420,240 720,180 C1000,120 1200,220 1440,160 L1440,320 L0,320 Z" />
+        <path class="hill mid" d="M0,240 C300,180 520,280 820,230 C1080,190 1260,260 1440,220 L1440,320 L0,320 Z" />
+        <path class="hill front" d="M0,280 C360,240 640,310 960,270 C1200,245 1320,290 1440,275 L1440,320 L0,320 Z" />
+      </svg>
+    </header>
+
+    <main>
+      <!-- ===== CHAPTER 1 ===== -->
+      <section class="chapter" data-sky="rain">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter One</p>
+          <h2 class="reveal">The moment I first saw you</h2>
+          <p class="date-stamp reveal">16 · XI · 2025 &nbsp;☂&nbsp; Third Wave Coffee</p>
+
+          <figure class="frame reveal">
+            <img src="assets/photos/ch1-thirdwave.png" alt="Me stepping into Third Wave Coffee and seeing you for the first time" />
+          </figure>
+
+          <div class="subtitles">
+            <p class="words">It was an ordinary rainy evening. The smell of roasted coffee, the patter on the glass, and a boy who thought he had come for a board game.</p>
+            <p class="words big">Then I saw you.</p>
+            <p class="words">You were laughing at the corner table, cards in hand, as if the whole café had been waiting all day to hear that sound. The lamps glowed warmer. The rain slowed down to listen.</p>
+            <p class="words">I just stood there, cheeks on fire and rain still on my jacket, and in that one foolish, beautiful second the universe dealt me the only card I would ever need.</p>
+            <p class="handwritten reveal">I walked in for a game. I walked out having lost my heart.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 2 ===== -->
+      <section class="chapter" data-sky="rain">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Two</p>
+          <h2 class="reveal">Decrypto, and the code I couldn't crack</h2>
+          <p class="date-stamp reveal">the very same evening</p>
+
+          <figure class="frame tilt reveal">
+            <img src="assets/photos/decrypto.png" alt="Us playing Decrypto at the same table" />
+          </figure>
+
+          <div class="subtitles">
+            <p class="words">Fate, with a sense of humour, sat me at your table. We played Decrypto: secret words, hidden codes, clues whispered across the table.</p>
+            <p class="words">Everyone was trying to crack the other team's code. I was only trying to crack one thing: how someone could laugh like that and not know she was stealing the whole room.</p>
+          </div>
+
+          <div class="decrypto reveal" aria-label="Decrypto code">
+            <p class="decrypto-label">✦ our secret code ✦</p>
+            <div class="code-digits"><span>1</span><span>4</span><span>3</span></div>
+            <p class="decode" data-final="I think I like you already.">▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 3 ===== -->
+      <section class="chapter" data-sky="dusk">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Three</p>
+          <h2 class="reveal">The cab that broke my heart</h2>
+          <p class="date-stamp reveal">later, as the rain grew softer</p>
+
+          <div class="subtitles">
+            <p class="words">The games ended too soon. Gathering all my courage, I asked if I could drop you home.</p>
+            <p class="words">I tried to ask your age. You smiled and gave me nothing. So I guessed, like a fool with a heart full of hope:</p>
+          </div>
+
+          <div class="guesses">
+            <button class="guess" type="button">24?</button>
+            <button class="guess" type="button">25?</button>
+            <button class="guess" type="button">26?</button>
+          </div>
+          <p class="guess-reply" aria-live="polite">tap a guess…</p>
+
+          <div class="subtitles">
+            <p class="words big">"My cab is waiting."</p>
+          </div>
+
+          <div class="road reveal" aria-hidden="true">
+            <div class="streetlamp"></div>
+            <div class="cab">🚕</div>
+            <div class="road-line"></div>
+          </div>
+
+          <div class="broken reveal" aria-hidden="true">
+            <span class="half l">❤</span><span class="half r">❤</span>
+          </div>
+
+          <div class="subtitles">
+            <p class="words">Four words, and my poor heart cracked right down the middle. I watched the tail-lights disappear into the rain and stood there like the last scene of a sad movie.</p>
+            <p class="handwritten reveal">But some stories only pause. They never end.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 4 ===== -->
+      <section class="chapter" data-sky="night">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Four</p>
+          <h2 class="reveal">A boy, two friends, and one name</h2>
+          <p class="date-stamp reveal">that same night</p>
+          <div class="subtitles">
+            <p class="words">I went home, but my heart stayed behind at that café table. I called Sajal and Aman, and for hours I talked about nothing but you.</p>
+          </div>
+          <div class="chat reveal">
+            <p class="bubble me">guys. GUYS. I met someone today 😵‍💫</p>
+            <p class="bubble them"><b>Aman:</b> here we go again 😂</p>
+            <p class="bubble me">no, this is different. her laugh... I can't explain it</p>
+            <p class="bubble them"><b>Sajal:</b> he is gone. completely gone. 😂</p>
+          </div>
+          <div class="subtitles">
+            <p class="handwritten reveal">They laughed at me. They were right. I was gone.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 5 ===== -->
+      <section class="chapter" data-sky="rain">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Five</p>
+          <h2 class="reveal">The empty chair</h2>
+          <p class="date-stamp reveal">one week later · Third Wave Coffee</p>
+          <div class="subtitles">
+            <p class="words">A week later I walked through that same door, hair fixed, heart racing, rehearsing hellos in my head.</p>
+            <p class="words big">You didn't come.</p>
+          </div>
+          <div class="clock reveal" aria-hidden="true">
+            <div class="hand hour"></div>
+            <div class="hand minute"></div>
+            <div class="pin"></div>
+          </div>
+          <div class="subtitles">
+            <p class="words">I waited through every round of every game, looking up each time the door opened. Every stranger who walked in was not you. The coffee went cold. The event ended. The chair stayed empty.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 6 ===== -->
+      <section class="chapter" data-sky="rain">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Six</p>
+          <h2 class="reveal">The number that stole my hope</h2>
+          <div class="subtitles">
+            <p class="words">I begged Sajal to help me. She found out the one thing you wouldn't tell me that night.</p>
+          </div>
+          <div class="age-reveal reveal" aria-label="Six years younger">
+            <span class="age-num" data-target="6">0</span>
+            <span class="age-text">years younger than me</span>
+          </div>
+          <div class="subtitles">
+            <p class="words">I was crushed. I told myself she wasn't meant for me, that I was chasing something I shouldn't. So I folded my hope up small and put it away.</p>
+            <p class="handwritten reveal">But hope, it turns out, is terrible at staying folded.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 7 ===== -->
+      <section class="chapter" data-sky="dawn">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Seven</p>
+          <h2 class="reveal">The message I almost didn't send</h2>
+          <div class="subtitles">
+            <p class="words">Sajal refused to let me give up. She made a plan: Comic Con, all of us together. And for the very first time, with shaking thumbs, I opened Instagram and messaged you.</p>
+          </div>
+          <div class="phone reveal">
+            <div class="phone-top">riya ✦</div>
+            <div class="phone-screen">
+              <p class="msg sent">Hey! It's me from the board games night 😄 we're going to Comic Con, want to come? I can pick you up</p>
+              <p class="typing"><span></span><span></span><span></span></p>
+              <p class="msg recv">Heyy!! Yes, I'd love to 😊 that sounds so fun</p>
+              <p class="msg recv">Let me know the time ✨</p>
+              <p class="msg sent">❤️</p>
+            </div>
+          </div>
+          <div class="subtitles">
+            <p class="words">You replied so warmly that I read it about forty times. A few kind words on a screen, and suddenly my whole day was glowing.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 8 ===== -->
+      <section class="chapter" data-sky="dusk">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Eight</p>
+          <h2 class="reveal">The best traffic jam of my life</h2>
+          <p class="date-stamp reveal">on the way to Comic Con</p>
+          <figure class="frame reveal">
+            <img src="assets/photos/car.png" alt="All of us laughing in the car stuck in traffic" />
+          </figure>
+          <div class="subtitles">
+            <p class="words">The city was stuck bumper to bumper. Horns, buses, autos, an endless sea of red lights. Any other day I would have hated it.</p>
+            <p class="words">But you were in the car, and we spent the whole ride laughing and making fun of poor Sajal until our stomachs hurt.</p>
+            <p class="handwritten reveal">I secretly prayed the traffic would never clear.</p>
+          </div>
+          <div class="laughs" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 9 ===== -->
+      <section class="chapter" data-sky="dawn">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Nine</p>
+          <h2 class="reveal">The girl with art on her eye</h2>
+          <p class="date-stamp reveal">Comic Con</p>
+          <figure class="frame tilt reveal sparkle">
+            <img src="assets/photos/comic.png" alt="Us together at Comic Con, you with a beautiful tattoo around your eye" />
+          </figure>
+          <div class="subtitles">
+            <p class="words">There were heroes and villains everywhere, capes and swords and costumes of every colour. But you got a delicate tattoo drawn around one eye, and after that I saw nothing else.</p>
+            <p class="words">Thousands of characters in that hall, and the only one I could look at was you.</p>
+            <p class="words">We wandered through the market, past anime posters and figurines, and then you said you love Attack on Titan.</p>
+          </div>
+          <div class="aot reveal">
+            <p class="aot-title">⚔️ Attack on Titan ⚔️</p>
+            <p class="aot-quote">"Shinzou wo sasageyo!"</p>
+            <p class="aot-sub">I would give my heart too. And I think I already had.</p>
+          </div>
+          <div class="subtitles">
+            <p class="handwritten reveal">Beautiful, and she likes Attack on Titan? I was done for.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 10 ===== -->
+      <section class="chapter" data-sky="night">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Ten</p>
+          <h2 class="reveal">Hot chocolate and the first real conversation</h2>
+          <p class="date-stamp reveal">that same night · GK2 Market → Hashery</p>
+          <div class="subtitles">
+            <p class="words">The day refused to end, and I wasn't going to complain. We went to GK2 market for dinner, then wandered through the glowing streets with full stomachs and nowhere to be.</p>
+          </div>
+          <div class="street reveal" aria-hidden="true">
+            <span class="bulb"></span><span class="bulb"></span><span class="bulb"></span><span class="bulb"></span><span class="bulb"></span><span class="bulb"></span><span class="bulb"></span>
+          </div>
+          <figure class="frame reveal steam">
+            <img src="assets/photos/gk2.png" alt="Us laughing over hot chocolate at Hashery" />
+          </figure>
+          <div class="subtitles">
+            <p class="words">Then a little café called Hashery, two cups of hot chocolate, and finally, for the first time, just you and me talking.</p>
+            <p class="words">You told me about your work: Customer Success at Recruit CRM.</p>
+          </div>
+          <div class="job reveal">
+            <p class="job-line"><span class="official">Customer Success, Recruit CRM</span></p>
+            <p class="job-line strike-in">call center 📞😌</p>
+            <p class="job-note">what you say &nbsp;vs&nbsp; what I say, just to see that face 😤</p>
+          </div>
+          <div class="subtitles">
+            <p class="words">Somewhere between the warm cups and the silly jokes, we stopped being strangers and became friends.</p>
+            <p class="handwritten reveal">It was the sweetest hot chocolate of my life, and it wasn't because of the chocolate.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 11 ===== -->
+      <section class="chapter" data-sky="night">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Eleven</p>
+          <h2 class="reveal">The quiet ride home</h2>
+          <div class="subtitles">
+            <p class="words">On the drive back everyone was still chatting and laughing, but you had drifted off to sleep in the back seat.</p>
+          </div>
+          <div class="sleeper reveal" aria-hidden="true">
+            <div class="moon"></div>
+            <span class="z z1">z</span><span class="z z2">z</span><span class="z z3">Z</span>
+            <div class="face">😴</div>
+          </div>
+          <div class="subtitles">
+            <p class="words">So peaceful, like a little child after the longest, happiest day. The city lights passed over your face, and I kept stealing glances just to make sure the moment was real.</p>
+            <p class="handwritten reveal">The world was loud. You were asleep. And my heart was wide awake.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 12 ===== -->
+      <section class="chapter" data-sky="rain">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Twelve</p>
+          <h2 class="reveal">Same table, same team, a different us</h2>
+          <p class="date-stamp reveal">another board games night</p>
+          <div class="subtitles">
+            <p class="words">Another board games night. Same café, same game, same team. But this time I didn't walk in as a stranger. I walked in as your friend.</p>
+            <p class="words">We cracked every code together, and we won again. Clearly, we were always meant to be on the same team.</p>
+          </div>
+          <div class="scoreboard reveal">
+            <span class="team">Us</span><span class="score">🏆 × 2</span>
+          </div>
+          <div class="tissue reveal">
+            <p class="paper">DECRYPTO<br /><small>clue sheet · round 3</small></p>
+            <p class="tissue-caption">…and then Sajal picked up the Decrypto clue sheet, thought it was a tissue, and blew her nose on it. 🤧</p>
+          </div>
+          <div class="subtitles">
+            <p class="handwritten reveal">We laughed so hard the whole café turned around. Legend.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 13 ===== -->
+      <section class="chapter" data-sky="night">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Thirteen</p>
+          <h2 class="reveal">This time, no cab was waiting</h2>
+          <div class="subtitles">
+            <p class="words">And then the moment I'd been waiting for since that first rainy night. I asked again if I could drop you home.</p>
+            <p class="words big">"Okay."</p>
+            <p class="words">No waiting cab this time. Sajal, the greatest wingwoman in history, made sure you sat in the front seat, right next to me.</p>
+          </div>
+          <div class="seat reveal" aria-hidden="true">
+            <span class="seat-me">🧑🏻</span><span class="seat-heart">💗</span><span class="seat-her">👩🏻</span>
+          </div>
+          <div class="subtitles">
+            <p class="handwritten reveal">Thank you, Sajal. Truly. This one's on you.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 14 ===== -->
+      <section class="chapter" data-sky="night">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Fourteen</p>
+          <h2 class="reveal">Kurkure momos and the moment I knew</h2>
+          <p class="date-stamp reveal">Brown Munde</p>
+          <figure class="frame reveal steam">
+            <img src="assets/photos/momos.png" alt="Us eating momos at Brown Munde" />
+          </figure>
+          <div class="subtitles">
+            <p class="words">We stopped at Brown Munde for momos. You went straight for the kurkure momos, of course. Fried, crunchy, gloriously unhealthy, just like every junk food you love.</p>
+          </div>
+          <div class="momo-meter reveal">
+            <p>Riya's junk-food-love meter</p>
+            <div class="meter"><span></span></div>
+            <p class="meter-note">(and yes, I will keep teasing you about it forever 😌)</p>
+          </div>
+          <div class="subtitles">
+            <p class="words">But somewhere between the momos and the laughter, you started talking about your family. How much you care about them. How deeply you love them. The same way I love mine.</p>
+            <p class="words">And it was like falling in love with you all over again.</p>
+          </div>
+          <div class="decision reveal">
+            <p class="decision-text">मुझे तो यही चाहिए.</p>
+            <p class="decision-sub">she's the one I want.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 15 ===== -->
+      <section class="chapter" data-sky="night">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Fifteen</p>
+          <h2 class="reveal">Tall, dark, handsome… sound familiar?</h2>
+          <p class="date-stamp reveal">the drive home, same night</p>
+          <div class="subtitles">
+            <p class="words">City lights sliding past the windshield, you in the front seat, and somehow the conversation turned to what kind of man you like.</p>
+            <p class="words">You started listing, and I started checking boxes in my head.</p>
+          </div>
+          <ul class="checklist reveal">
+            <li><span class="box"></span>Tall</li>
+            <li><span class="box"></span>Dark</li>
+            <li><span class="box"></span>Handsome</li>
+            <li><span class="box"></span>Intelligent</li>
+            <li><span class="box"></span>Older than her</li>
+          </ul>
+          <p class="match reveal">✦ 100% match ✦</p>
+          <div class="subtitles">
+            <p class="words">It sounded less like a list and more like a description of the boy sitting next to you. I kept my eyes on the road and tried very hard not to smile.</p>
+            <p class="words big">She likes me too.</p>
+          </div>
+          <div class="game-on reveal">
+            <span>GAME</span><span>ON</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 16 ===== -->
+      <section class="chapter" data-sky="night">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Sixteen</p>
+          <h2 class="reveal">The best gift was a message at midnight</h2>
+          <p class="date-stamp reveal">my birthday</p>
+          <div class="subtitles">
+            <p class="words">I invited you to my birthday. You said you wouldn't be able to make it, and I pretended that was completely fine.</p>
+            <p class="words">It was not completely fine.</p>
+          </div>
+          <div class="midnight reveal">
+            <div class="digital"><span class="hh">11</span><span class="colon">:</span><span class="mm">59</span></div>
+            <div class="notif">
+              <p class="notif-app">💌 riya</p>
+              <p class="notif-text">Happy birthday! 🎂✨</p>
+            </div>
+          </div>
+          <div class="subtitles">
+            <p class="words">But exactly at midnight, before anyone else, my phone lit up with your name, and a message you had written so carefully, word by word, just for me.</p>
+            <p class="words">I got a lot of gifts that year. Put them all together, and they still didn't make me as happy as that one message.</p>
+            <p class="handwritten reveal">You weren't there, and yet you were the best part of my birthday.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 17 ===== -->
+      <section class="chapter" data-sky="dusk">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Seventeen</p>
+          <h2 class="reveal">Will you go to the movies with me?</h2>
+          <p class="date-stamp reveal">our very first date 🎬</p>
+          <div class="subtitles">
+            <p class="words">With sweaty palms and zero expectations, I asked you out to see Dhurandhar. I had already prepared myself for a polite no.</p>
+          </div>
+          <div class="ticket reveal">
+            <div class="ticket-main">
+              <p class="ticket-title">DHURANDHAR</p>
+              <p class="ticket-sub">ADMIT TWO · our first date</p>
+            </div>
+            <div class="ticket-stub">YES!</div>
+          </div>
+          <div class="subtitles">
+            <p class="words big">You said yes!</p>
+            <p class="words">Before the movie we got talking about celebrity crushes. Out of every famous man on the planet, you picked Tilak Varma.</p>
+          </div>
+          <div class="lookalike reveal">
+            <span class="la-card">🏏 Tilak Varma</span>
+            <span class="la-eq">≈</span>
+            <span class="la-card me">🙋🏻‍♂️ me</span>
+          </div>
+          <div class="subtitles">
+            <p class="handwritten reveal">The one who looks the most like me? Miss Riya, that was flirting. I noticed. 😏</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 18 ===== -->
+      <section class="chapter" data-sky="night">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Eighteen</p>
+          <h2 class="reveal">Operation: Arm Around Her Shoulder</h2>
+          <figure class="frame reveal projector">
+            <img src="assets/photos/movie.png" alt="Us at the movie, my arm around your shoulder" />
+          </figure>
+          <div class="subtitles">
+            <p class="words">The movie was playing, but I could not tell you a single scene from the first half. My brain was running one mission, over and over.</p>
+          </div>
+          <div class="mission reveal">
+            <p class="m-step">📍 Before interval: overthink it</p>
+            <p class="m-step">⏸️ Interval: overthink it more</p>
+            <p class="m-step">🫣 After interval: now or never…</p>
+            <p class="m-step win">💪 Leap of faith: arm across her shoulder</p>
+            <p class="m-step win">✅ She was okay with it. MISSION SUCCESS.</p>
+          </div>
+          <div class="subtitles">
+            <p class="words">You were perfectly fine with it, and the whole cinema could have exploded on screen and I would not have noticed.</p>
+            <p class="words">A little later, my arm started to hurt. Then it really hurt. But I didn't move a single inch, because who knew when I'd get this chance again?</p>
+          </div>
+          <div class="pain reveal">
+            <p>arm pain</p>
+            <div class="meter"><span class="pain-bar"></span></div>
+            <p>worth it</p>
+            <div class="meter"><span class="worth-bar"></span></div>
+          </div>
+          <div class="subtitles">
+            <p class="handwritten reveal">Numb arm, full heart. We came a little closer that night.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 19 ===== -->
+      <section class="chapter" data-sky="night">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Nineteen</p>
+          <h2 class="reveal">Walks, secrets and endless chats</h2>
+          <p class="date-stamp reveal">a walk through NSP</p>
+          <div class="footsteps reveal" aria-hidden="true">
+            <span>👣</span><span>👣</span><span>👣</span><span>👣</span><span>👣</span><span>👣</span>
+          </div>
+          <div class="subtitles">
+            <p class="words">After the movie we walked through NSP, and with every step the nervousness melted into something easier and warmer.</p>
+            <p class="words">Then you trusted me with your secrets, including the kind of spicy books you secretly read. 📚🌶️</p>
+          </div>
+          <div class="secret reveal">
+            <p class="secret-lock">🔒</p>
+            <p class="secret-text">classified: Riya's reading list 🤭</p>
+          </div>
+          <div class="subtitles">
+            <p class="words">And from that night on the chats never stopped. Good mornings, silly memes, late-night talks that ran long past bedtime.</p>
+          </div>
+          <div class="chat-stream reveal" aria-hidden="true"></div>
+          <div class="subtitles">
+            <p class="handwritten reveal">We weren't just friends anymore. We were becoming us.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 20 ===== -->
+      <section class="chapter" data-sky="dusk">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Twenty</p>
+          <h2 class="reveal">The girl with the balloon</h2>
+          <p class="date-stamp reveal">just another evening walk</p>
+          <div class="subtitles">
+            <p class="words">Hanging out had become our normal. Long talks, easy laughter, all of us wandering down the street with nowhere in particular to go.</p>
+            <p class="words">Then we passed a balloon seller, and I bought one just for you and tied it gently around your wrist.</p>
+          </div>
+          <div class="balloon-wrap reveal" aria-hidden="true">
+            <div class="balloon"><span class="string"></span></div>
+          </div>
+          <figure class="frame reveal">
+            <img src="assets/photos/balloon.png" alt="Me tying a balloon on your wrist" />
+          </figure>
+          <div class="subtitles">
+            <p class="words">You looked so pretty that day. And you carried that balloon everywhere, so proudly, like a little kid at a fair.</p>
+            <p class="handwritten reveal">I still go back to the pictures from that day. You, a balloon, and my whole heart floating right beside you.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 21 ===== -->
+      <section class="chapter" data-sky="dawn">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Twenty-One</p>
+          <h2 class="reveal">You literally spilled the tea</h2>
+          <p class="date-stamp reveal">December 2025 · Got Tea, Punjabi Bagh</p>
+          <div class="subtitles">
+            <p class="words">A cosy evening at Got Tea, all of us around one table. And then, true to form, you literally spilled the tea, right onto your pants.</p>
+          </div>
+          <div class="teacup reveal" aria-hidden="true">
+            <span class="cup">🍵</span>
+            <span class="drop d1"></span><span class="drop d2"></span><span class="drop d3"></span>
+            <span class="tissue-dab">🧻</span>
+          </div>
+          <div class="subtitles">
+            <p class="words">I grabbed a tissue and helped clean you up, flirting openly the whole time. No more hiding it, no more pretending.</p>
+            <p class="words">By then it was written all over our faces. Everyone at that table knew something was going on, and that was the day Mahek finally found out.</p>
+          </div>
+          <div class="gossip reveal">
+            <p class="g-name">Mahek</p>
+            <p class="g-text">wait…&nbsp; are you two…? 👀</p>
+          </div>
+          <div class="subtitles">
+            <p class="words">Before we left, we got a polaroid taken. Our first real picture together.</p>
+          </div>
+          <figure class="instant reveal">
+            <img src="assets/photos/got.png" alt="Our polaroid from Got Tea, December 2025" />
+            <figcaption>Got Tea · Dec 2025</figcaption>
+          </figure>
+          <div class="subtitles">
+            <p class="handwritten reveal">You spilled the tea, and I spilled my heart. Neither of us could hide it anymore.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 22 ===== -->
+      <section class="chapter" data-sky="dusk">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Twenty-Two</p>
+          <h2 class="reveal">Dosti ya pyaar?</h2>
+          <p class="date-stamp reveal">daily talks, daily flirting</p>
+          <div class="subtitles">
+            <p class="words">Somewhere between daily talks, game banter, and shameless flirting, the age gap stopped mattering. It felt like it didn't exist at all.</p>
+          </div>
+          <div class="chips reveal" aria-hidden="true">
+            <span class="chip">same blood group 🩸</span>
+            <span class="chip">dosti ya pyaar?</span>
+            <span class="chip yes">answer: both, then love.</span>
+          </div>
+          <div class="subtitles">
+            <p class="words">Then came Pasta Street. You gave me little hints that you were ready to consider a relationship, and that your parents might get you married early.</p>
+            <p class="words">I acted calm. I was not calm. I was the happiest and most excited I'd ever been.</p>
+          </div>
+          <div class="hints reveal">
+            <p>relationship? <span>maybe</span></p>
+            <p>future? <span>soon</span></p>
+            <p>my heart? <span>racing</span></p>
+          </div>
+          <div class="subtitles">
+            <p class="handwritten reveal">At that table, hope became real.</p>
+            <p class="words">And every time I dropped you home, you never forgot to say it: "Thank you." Then came the goodbye hug.</p>
+            <p class="words">A quick one at first. Then a little longer. Then longer still. Night by night, neither of us wanted to be the first one to let go.</p>
+          </div>
+          <div class="hug-nights reveal" aria-hidden="true">
+            <div class="hug-row"><span class="hug-label">night 1</span><span class="hug-bar" style="--w: 18%"></span><span class="hug-time">2 sec</span></div>
+            <div class="hug-row"><span class="hug-label">night 5</span><span class="hug-bar" style="--w: 40%"></span><span class="hug-time">5 sec</span></div>
+            <div class="hug-row"><span class="hug-label">night 10</span><span class="hug-bar" style="--w: 68%"></span><span class="hug-time">15 sec</span></div>
+            <div class="hug-row"><span class="hug-label">night ∞</span><span class="hug-bar" style="--w: 100%"></span><span class="hug-time">never letting go 🤍</span></div>
+          </div>
+          <div class="subtitles">
+            <p class="handwritten reveal">Those hugs said everything we hadn't said out loud yet.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 23 ===== -->
+      <section class="chapter" data-sky="night">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Twenty-Three</p>
+          <h2 class="reveal">The day you asked me out</h2>
+          <p class="date-stamp reveal">thanks, Mahek ✨ · back at Got Tea</p>
+          <div class="subtitles">
+            <p class="words">Then the day finally came. You asked me out. Not hints, not maybes, not almosts. You asked.</p>
+          </div>
+          <button class="askout reveal" type="button" disabled>Will you be mine? 💗</button>
+          <div class="subtitles">
+            <p class="words">And the tea spilled that day wasn't from a cup. It was the truth we'd both been carrying in our minds the whole time.</p>
+            <p class="words">We took another polaroid at Got Tea. This time it was just us.</p>
+          </div>
+          <div class="wallet-scene reveal" aria-hidden="true">
+            <div class="wallet"></div>
+            <div class="mini-polaroid">
+              <p>US</p>
+            </div>
+          </div>
+          <div class="subtitles">
+            <p class="words">I still keep that photo in my wallet.</p>
+            <p class="handwritten reveal">Some people carry cash. I carry us.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CHAPTER 24 ===== -->
+      <section class="chapter" data-sky="night">
+        <div class="page">
+          <p class="chapter-no reveal">Chapter Twenty-Four</p>
+          <h2 class="reveal">New Year's Eve — the night everything became us</h2>
+          <p class="date-stamp reveal">ATF New Year Party</p>
+          <figure class="frame reveal sparkle">
+            <img src="assets/photos/kiss.png" alt="Our New Year's Eve kiss" />
+          </figure>
+          <div class="subtitles">
+            <p class="words">You looked unbelievably pretty that night. I was nervous, loud, overthinking everything, and pretending I was not scared.</p>
+            <p class="words">I had one wish in my mind for midnight — to kiss you — but my courage kept hiding behind all that noise and all that booze.</p>
+          </div>
+          <div class="countdown reveal" aria-hidden="true">
+            <span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
+          </div>
+          <div class="subtitles">
+            <p class="words">You brought me inside to a quieter room. Even there, with everything spinning, I could only look at you.</p>
+          </div>
+          <div class="consent reveal">
+            <p class="ask">Can I kiss you?</p>
+            <p class="yes">yes. 💗</p>
+          </div>
+          <div class="subtitles">
+            <p class="words">And then I asked. And you said yes. That was the moment our story truly began.</p>
+            <p class="handwritten reveal">From that kiss to today: 9 beautiful months. Happy 9 months, my love.</p>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        ===== ADD NEW MOMENTS HERE =====
+        Copy a <section class="chapter"> block above.
+        data-sky can be: dawn, rain, dusk, night
+      -->
+
+      <!-- ===== WHERE I WENT QUIET ===== -->
+      <section class="chapter" data-sky="dusk">
+        <div class="page">
+          <p class="chapter-no reveal">An honest page</p>
+          <h2 class="reveal">Where I went quiet</h2>
+          <div class="subtitles">
+            <p class="words">You told me you felt I don't give you enough time. You were right.</p>
+            <p class="words">You told me I don't say how I feel. I kept it inside when I should have handed it to you.</p>
+            <p class="words">You told me you feel loved only when it's convenient. I'm sorry I ever made you feel that way. You are never an afterthought.</p>
+            <p class="handwritten reveal">This isn't an excuse. It's the start of me doing better.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROMISES ===== -->
+      <section class="chapter" data-sky="dusk">
+        <div class="page">
+          <p class="chapter-no reveal">A promise</p>
+          <h2 class="reveal">What changes, from today</h2>
+          <div class="promises">
+            <article class="promise reveal"><span>🌙</span><h3>Your evening</h3><p>One evening every week that belongs only to you. Work away.</p></article>
+            <article class="promise reveal"><span>💌</span><h3>Saying it out loud</h3><p>Every day I'll tell you what you mean to me, not just think it.</p></article>
+            <article class="promise reveal"><span>🕊️</span><h3>No going silent</h3><p>When I'm busy, I'll tell you early, and I'll always come back.</p></article>
+            <article class="promise reveal"><span>🌸</span><h3>I'll plan for us</h3><p>A date every month, planned by me, just for us.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== REASONS ===== -->
+      <section class="chapter" data-sky="night">
+        <div class="page">
+          <p class="chapter-no reveal">A deck of my own</p>
+          <h2 class="reveal">Draw a card</h2>
+          <div class="cards">
+            <button class="flip reveal" type="button"><span class="front">✦</span><span class="back">Your laugh, So beautiful.</span></button>
+            <button class="flip reveal" type="button"><span class="front">✦</span><span class="back">Your kindness, even when nobody is watching.</span></button>
+            <button class="flip reveal" type="button"><span class="front">✦</span><span class="back">That smile, the one in every photo.</span></button>
+            <button class="flip reveal" type="button"><span class="front">✦</span><span class="back">Your patience while I'm still learning.</span></button>
+            <button class="flip reveal" type="button"><span class="front">✦</span><span class="back">You love with your whole heart.</span></button>
+            <button class="flip reveal" type="button"><span class="front">✦</span><span class="back">With you, home is a person, not a place.</span></button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FINALE ===== -->
+    <section class="scene finale" data-sky="night">
+      <div class="stars" aria-hidden="true"></div>
+      <div class="lanterns" aria-hidden="true"></div>
+      <div class="letter reveal">
+        <p class="chapter-no">To be continued…</p>
+        <h2>My dearest Riya,</h2>
+        <p>
+          Thank you for nine months of choosing me, even on the days I made it
+          hard. I don't want to love you only when it's easy. I want to love
+          you on purpose, with my time, my words and my effort.
+        </p>
+        <p class="handwritten">Happy 9 months. I choose you, every single day.</p>
+        <audio controls>
+          <source src="assets/audio/message.mp3" type="audio/mpeg" />
+        </audio>
+        <button class="button" id="yes" type="button">Keep writing this story with me? 💗</button>
+      </div>
+    </section>
+
+    <!-- little soot sprites wandering at the bottom -->
+    <div class="sprites" aria-hidden="true"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
